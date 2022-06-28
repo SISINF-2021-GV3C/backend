@@ -1,0 +1,30 @@
+{
+  "name": "sisinf",
+  "version": "1.0.0",
+  "description": "Backend para las prácticas de la asignatura sistema de información de ingenieria informática en UNIZAR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SISINF-2021-GV3C/backend.git"
+  },
+  "keywords": [
+    "[\"backend\"",
+    "\"sisinf\"",
+    "\"UNIZAR\"",
+    "\"sistemas",
+    "de",
+    "información\"",
+    "\"nodejs\"",
+    "\"express\"",
+    "\"mysql\"]"
+  ],
+  "author": "Pedro Aibar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SISINF-2021-GV3C/backend/issues"
+  },
+  "homepage": "https://github.com/SISINF-2021-GV3C/backend#readme"
+}
