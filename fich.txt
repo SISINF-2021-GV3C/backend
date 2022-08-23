@@ -1,0 +1,23 @@
+commit 122ed57a0c6ee65337dc1de2192e16e5b6b9a4ed
+Author: motinsa <pedroaibarmarco@gmail.com>
+Date:   Thu Aug 18 10:27:43 2022 +0200
+
+    Conexion a BD y autentificación
+
+commit 7e28e630e5f3bfa3be5b72aa40ba90f08b4b7c52
+Author: motinsa <pedroaibarmarco@gmail.com>
+Date:   Tue Jun 28 18:27:47 2022 +0200
+
+    Conexion a BD y autentificación
+
+commit 7bc73d367138a64e78609cfc4e32dcff7cc7a052
+Author: motinsa <pedroaibarmarco@gmail.com>
+Date:   Tue Jun 28 17:53:54 2022 +0200
+
+    Commit inicial
+
+commit e110ad7fb7c10f295cd343706fe0d1cbbfca46a9
+Author: Pedro Aibar <75799784+motinsa@users.noreply.github.com>
+Date:   Tue Jun 28 16:29:42 2022 +0200
+
+    Initial commit

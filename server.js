@@ -31,8 +31,12 @@ console.log("Funciona")
 
 
 const getCoins = require('./routes/getCoins')
+const register = require('./routes/postRegister')
+const principal = require('./routes/get')
 app.use('/getCoins',getCoins)
-const server = app.listen(3000)
+app.use('/register',register)
+app.use('',principal)
+const server = app.listen(3004)
 
 module.exports = { app}
 

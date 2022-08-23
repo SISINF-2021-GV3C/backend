@@ -1,3 +1,12 @@
-GET http://localhost:3000/getCoins
+     POST  http://localhost:3004/register
 Content-Type: application/json
+
+{
+    "firstName" : "Pedro1",
+    "lastName" : "Aibar",
+    "email" : "hola@gmail.com",
+    "username" : "Pedro1",
+    "password": "motinsa",
+    "tlf": "68909"
+}
 
