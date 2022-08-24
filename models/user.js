@@ -5,37 +5,54 @@ const e = require('express');
 
 var con = require('../configs/database')
 function isObjEmpty(obj) {
-  for (var prop in obj) {
-    if (obj.hasOwnProperty(prop)) return false;
-  }
-
-  return true;
-}
-class User {
-    constructor(user) {
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) return false;
     }
+  
+    return true;
+  }
+class User {
     //Función para crear usuario user={firstName, lastName, email, username, password, tlf}
-    static async create(firstName,lastName,email,username,password,tlf){
-        if(true){//!this.getUserByNickname
-            var sql = "INSERT INTO usuario(nombre,apellido,email,nickname,pass) values  (\"" +
+    static async create(firstName,lastName,email,username,password,country,date){
+        var checkNickname = await this.getUserByNickname(username)
+       
+        if(!checkNickname){
+            var sql = "INSERT INTO usuario(nombre,apellido,email,nickname,pass,pais,anyo_nac) values  (\"" +
             firstName + "\", \"" +
             lastName + "\", \"" +
             email + "\",  \"" +
             username + "\", \"" +
-            password + "\")"
+            password + "\", \"" +
+            country + "\","  +
+            date + ")"
             
             let rows = await query(sql);
+            console.log("aqui")
             let vacio = isObjEmpty(rows)
             if (!vacio) {
-                return rows
-        
-                return true
+                console.log("Exito")
+                return "Usuario registrado"
             }
             else  {
-                return false
+                return "Fallo al hacer el insert"
             }
+        }
+        else{
+            return "El nombre de usuario ya existe"
+        }
     }
-    }
+    static async getAllUsers(result) {
+        var sql = "SELECT * FROM usuario ";
+        let rows = await query(sql);
+        let vacio = isObjEmpty(rows)
+        if (!vacio) {
+            return rows
+        }
+        else{
+            return false
+        }
+    }  
+
     static async getUserByNickname(nickname, result) {
         
         var sql = "SELECT * FROM usuario WHERE nickname = \"" + nickname + "\"";
@@ -43,7 +60,6 @@ class User {
         let vacio = isObjEmpty(rows)
         if (!vacio) {
             return rows
-    
         }
         else{
             return false
@@ -74,5 +90,6 @@ let query = function( sql, values ) {
   });
   })
   }
+  
   
  module.exports = User;

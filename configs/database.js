@@ -16,24 +16,5 @@ con.connect(function(err) {
   });
 // Función que lanza una query a traves de una promesa para las operaciones 
 // asíncronas
-let query = function( sql, values ) {
-    // devolver una promesa
-  return new Promise(( resolve, reject ) => {
-   con.query(sql,(err, res) => {
-    if ( err ) {
-      if (err) throw err;
-      reject( err )
-    } else {
-      resolve( res )
-    }
-  });
-  })
-  }
-  function isObjEmpty(obj) {
-    for (var prop in obj) {
-      if (obj.hasOwnProperty(prop)) return false;
-    }
-  
-    return true;
-  }
-module.exports = {con,query,isObjEmpty};
+
+module.exports = con;

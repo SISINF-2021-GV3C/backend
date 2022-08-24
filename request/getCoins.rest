@@ -1,12 +1,14 @@
-     POST  http://localhost:3004/register
+POST http://localhost/register
 Content-Type: application/json
 
 {
-    "firstName" : "Pedro1",
+    "firstName" : "Pedro21",
     "lastName" : "Aibar",
     "email" : "hola@gmail.com",
-    "username" : "Pedro1",
+    "username" : "Paads23ue1232d2222l",
     "password": "motinsa",
-    "tlf": "68909"
+    "country": "Spain",
+    "date" : 19022001
+    
 }
 
