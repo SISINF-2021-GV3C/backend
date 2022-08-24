@@ -48,7 +48,17 @@ class User {
         else{
             return false
         }
-    }    
+    }  
+    static async addFavCoin(nickname,coin){
+        if(!this.getUserByNickname){
+            return false
+        }
+        else{
+            var sql = "INSERT INTO sigue(nickname,simbolo) values (\"" + nickname + "\",\"" + coin + "\")";
+            await query(sql);
+            return true
+        }
+    }
 }
 let query = function( sql, values ) {
     // devolver una promesa

@@ -1,0 +1,8 @@
+     POST  http://localhost/addFavCoin
+Content-Type: application/json
+
+{
+ "nickname": "Pedro",
+ "coin": "BTC"
+}
+
