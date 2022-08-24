@@ -1,7 +1,7 @@
 // Fichero para la autentificación
 
 const LocalStrategy = require('passport-local').Strategy
-const bcrypt = require('bcrypt')
+
 
 const User = require("../models/user.js");
 
@@ -12,7 +12,7 @@ function initialize(passport) {
       return done(null, false, { message: 'No user with that nickname' })
     }
     try {
-      if (await bcrypt.compare(password, user.password)) {
+      if (password, user.password) {
         //console.log("Error cons")
         return done(null, user)
       } else {
