@@ -35,12 +35,14 @@ const register = require('./routes/postRegister')
 const login = require('./routes/login.js')
 const principal = require('./routes/get')
 const addFav = require('./routes/addFavCoin')
+const getUser = require('./routes/getUsers')
 
 app.use('/getCoins',getCoins)
 app.use('/register',register)
 app.use('/addFavCoin',addFav)
 app.use(principal)
-//app.use('/login',login)
+app.use('/getUsers',getUser)
+app.use('/login',login)
 
 const server = app.listen(80)
 
