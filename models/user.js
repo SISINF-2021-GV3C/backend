@@ -75,6 +75,23 @@ class User {
             return true
         }
     }
+    static async login(nickname,pass){
+        if(! await this.getUserByNickname(nickname)){
+            return "El usuario no existe"
+        }
+        else{
+            console.log(nickname)
+            var sql = "SELECT pass FROM usuario WHERE nickname = \"" + nickname + "\"";
+            var password = await query(sql);
+            if(password[0].pass == pass){
+                return "exito"
+            }
+            else{
+                return "contraseña incorrecta"
+            }
+        }
+
+    }
 }
 let query = function( sql, values ) {
     // devolver una promesa

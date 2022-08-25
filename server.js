@@ -36,6 +36,8 @@ const login = require('./routes/login.js')
 const principal = require('./routes/get')
 const addFav = require('./routes/addFavCoin')
 const getUser = require('./routes/getUsers')
+const deleteUser = require('./routes/deleteUser')
+const estadisticas = require('./routes/estadisticas')
 
 app.use('/getCoins',getCoins)
 app.use('/register',register)
@@ -43,6 +45,8 @@ app.use('/addFavCoin',addFav)
 app.use(principal)
 app.use('/getUsers',getUser)
 app.use('/login',login)
+app.use('/deleteUser',deleteUser)
+app.use('/estadisticas',estadisticas)
 
 const server = app.listen(80)
 

@@ -1,0 +1,14 @@
+POST http://localhost/register
+Content-Type: application/json
+
+{
+    "firstName" : "Pedro21",
+    "lastName" : "Aibar",
+    "email" : "hola@gmail.com",
+    "username" : "Daveidddd",
+    "password": "motinsa",
+    "country": "Argentina",
+    "date" : 19022001
+    
+}
+

@@ -1,18 +1,13 @@
-
 const express = require('express')
 const router = express.Router()
 const passport = require('passport')
 const myPassport = require('../configs/passport')
+const Admin = require('../models/admin')
 const User = require('../models/user')
 
 router.post('/', async (req, res) => {
-    let respuesta = await User.login(req.body.username,req.body.password)
-    if(respuesta == "exito"){
-        res.sendStatus(200)
-    }
-    else{
-        res.send(respuesta)
-    }
+    let respuesta = await Admin.deleteUser(req.body.username)
+    res.send(respuesta)
 })
 
 
