@@ -64,13 +64,34 @@ class User {
         else{
             return false
         }
-    }  
+    }
+    static async getFavCoin(nickname){
+        var sql = "SELECT simbolo FROM sigue WHERE nickname = \"" + nickname + "\"";
+        let rows = await query(sql);
+        let vacio = isObjEmpty(rows)
+        if (!vacio) {
+            return rows
+        }
+        else{
+            return false
+        }
+    }
     static async addFavCoin(nickname,coin){
         if(!this.getUserByNickname){
             return false
         }
         else{
             var sql = "INSERT INTO sigue(nickname,simbolo) values (\"" + nickname + "\",\"" + coin + "\")";
+            await query(sql);
+            return true
+        }
+    }
+    static async deleteFavCoin(nickname,coin){
+        if(!this.getUserByNickname){
+            return false
+        }
+        else{
+            var sql = "DELETE FROM usuario WHERE nickname = \"" + nickname + "\" AND simbolo = \"" + coin + "\"";
             await query(sql);
             return true
         }
