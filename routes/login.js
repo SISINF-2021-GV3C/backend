@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         res.sendStatus(200)
     }
     else{
-        res.send(respuesta)
+        res.sendStatus(400)
     }
 })
 

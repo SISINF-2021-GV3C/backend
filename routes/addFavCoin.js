@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
     console.log("Registrando usuario")
     res.setHeader('Content-Type', 'application/json');
     respuesta = {
-        "exito": await User.addFavCoin(req.body.nickname,req.body.coin)
+        "exito": await User.addFavCoin(req.body.username,req.body.coin)
     }
     res.send(respuesta)
     console.log(respuesta)

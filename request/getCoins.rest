@@ -1,14 +1,3 @@
-POST http://localhost/register
-Content-Type: application/json
+GET http://localhost/getFavCoin?username=David
 
-{
-    "firstName" : "Pedro21",
-    "lastName" : "Aibar",
-    "email" : "hola@gmail.com",
-    "username" : "Paads23ue1232d2222l",
-    "password": "motinsa",
-    "country": "Spain",
-    "date" : 19022001
-    
-}
 

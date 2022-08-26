@@ -81,6 +81,7 @@ class User {
             return false
         }
         else{
+            console.log(nickname)
             var sql = "INSERT INTO sigue(nickname,simbolo) values (\"" + nickname + "\",\"" + coin + "\")";
             await query(sql);
             return true

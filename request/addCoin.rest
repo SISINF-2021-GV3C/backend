@@ -2,7 +2,7 @@
 Content-Type: application/json
 
 {
- "nickname": "Pedro",
- "coin": "BTC"
+ "username": "David",
+ "coin": "ada"
 }
 
