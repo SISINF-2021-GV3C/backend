@@ -26,18 +26,20 @@ class Admin {
         var queryEdad = "SELECT nickname,anyo_nac from usuario"
         var querySumaUsuarios = "SELECT count(nickname) from usuario"
         var queryGenero = "SELECT count(nickname) from usuario where genero = \"" + "hombre" + "\"";
+        var queryGenero2 = "SELECT count(nickname) from usuario where genero = \"" + "mujer" + "\"";
         var pais = await query(queryPais)
         var numeroUsers = await query(querySumaUsuarios)
         var favCoin = await query(queryFavCoin)
         var edad = await query(queryEdad)
-        var genero = await query(queryGenero)
-
+        var hombre= await query(queryGenero)
+        var mujer = await query(queryGenero2)
+        //genero = genero[0].count(nickname)
         //edad = {"edad": edad}
         //numeroUsers = {"numero de usuarios": numeroUsers}
         //pais = {"paises mas famosos": pais}
-        var total = {pais,numeroUsers,edad,favCoin,genero}
+        var total = {pais,numeroUsers,edad,favCoin,hombre,mujer}
 
-        console.log(numeroUsers) 
+        console.log(hombre) 
         return total
    
 
