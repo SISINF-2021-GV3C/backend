@@ -92,7 +92,7 @@ class User {
             return false
         }
         else{
-            var sql = "DELETE FROM usuario WHERE nickname = \"" + nickname + "\" AND simbolo = \"" + coin + "\"";
+            var sql = "DELETE FROM sigue WHERE nickname = \"" + nickname + "\" AND simbolo = \"" + coin + "\"";
             await query(sql);
             return true
         }

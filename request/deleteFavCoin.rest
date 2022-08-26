@@ -1,0 +1,7 @@
+     POST  http://localhost/deleteFavCoin
+Content-Type: application/json
+
+{
+ "username": "Pedro",
+ "coin": "ada"
+}
