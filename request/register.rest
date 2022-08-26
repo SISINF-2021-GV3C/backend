@@ -5,9 +5,10 @@ Content-Type: application/json
     "firstName" : "Pedro21",
     "lastName" : "Aibar",
     "email" : "hola@gmail.com",
-    "username" : "Daveidddd",
+    "username" : "Paul1",
     "password": "motinsa",
     "country": "Argentina",
+    "genero" : "hombre",
     "date" : 19022001
     
 }

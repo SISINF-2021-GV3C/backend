@@ -25,16 +25,17 @@ class Admin {
         var queryFavCoin = "SELECT simbolo FROM sigue GROUP BY simbolo ORDER BY count(simbolo) LIMIT 3 "
         var queryEdad = "SELECT nickname,anyo_nac from usuario"
         var querySumaUsuarios = "SELECT count(nickname) from usuario"
-        
+        var queryGenero = "SELECT count(nickname) from usuario where genero = \"" + "hombre" + "\"";
         var pais = await query(queryPais)
         var numeroUsers = await query(querySumaUsuarios)
         var favCoin = await query(queryFavCoin)
         var edad = await query(queryEdad)
+        var genero = await query(queryGenero)
 
         //edad = {"edad": edad}
         //numeroUsers = {"numero de usuarios": numeroUsers}
         //pais = {"paises mas famosos": pais}
-        var total = {pais,numeroUsers,edad,favCoin}
+        var total = {pais,numeroUsers,edad,favCoin,genero}
 
         console.log(numeroUsers) 
         return total

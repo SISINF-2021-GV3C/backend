@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
     console.log("Registrando usuario")
     res.setHeader('Content-Type', 'application/json');
     respuesta = { 
-        "resuesta":await User.create(req.body.firstName,req.body.lastName,req.body.email,req.body.username,req.body.password,req.body.country,req.body.date)
+        "resuesta":await User.create(req.body.firstName,req.body.lastName,req.body.email,req.body.username,req.body.password,req.body.country,req.body.date,req.body.genero)
     }
     res.send(respuesta)
     console.log(respuesta)
