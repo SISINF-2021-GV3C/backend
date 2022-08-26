@@ -1,5 +1,6 @@
-const e = require('express');
-
+// Fichero en donde se realizaran todas las acciones relacionadas con el admin
+// en la BD 
+const e = require('express')
 var con = require('../configs/database')
 var User = require('./user')
 function isObjEmpty(obj) {
