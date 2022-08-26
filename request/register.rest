@@ -9,7 +9,8 @@ Content-Type: application/json
     "password": "motinsa",
     "country": "Argentina",
     "genero" : "hombre",
-    "date" : 19022001
+    "date" : 19022001,
+    "telefono" : "648514543"
     
 }
 

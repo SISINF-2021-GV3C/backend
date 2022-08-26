@@ -13,11 +13,11 @@ function isObjEmpty(obj) {
   }
 class User {
     //Función para crear usuario user={firstName, lastName, email, username, password, tlf}
-    static async create(firstName,lastName,email,username,password,country,date,tlf,genero){
+    static async create(firstName,lastName,email,username,password,country,genero,tlf,date){
         var checkNickname = await this.getUserByNickname(username)
        
         if(!checkNickname){
-            var sql = "INSERT INTO usuario(nombre,apellido,email,nickname,pass,pais,genero,tlf,anyo_nac) values  (\"" +
+            var sql = "INSERT INTO usuario(nombre,apellido,email,nickname,pass,pais,genero,telefono,anyo_nac) values  (\"" +
             firstName + "\", \"" +
             lastName + "\", \"" +
             email + "\",  \"" +
